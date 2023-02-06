@@ -1,0 +1,61 @@
+{% extends 'base/layout.html' %}
+
+  {% block main%}
+
+  <div id="page-banner-area" class="page-banner-area" style="background-image:url(static/images/banner/banner002.jpg)">
+    <!-- Subpage title start -->
+    <div class="page-banner-title">
+          <div class="text-center">
+            <h2>User Login</h2>
+         </div>
+      </div><!-- Subpage title end -->
+  </div><!-- Banner end -->
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+    <center>
+
+    <div class="gap-30"></div>
+
+      <form action="{%url 'veriotp'%}" method="post" class="contact-form-bottom">
+        {% csrf_token %}
+        <div class="error-container"></div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="Username" name="username" id="username" type="hidden" required>
+            </div>
+          </div>
+
+
+        </div>
+
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="otp" name="otp" id="otp" type="password" required>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="about" name="about" id="about" type="hidden">
+            </div>
+          </div>
+          <p>please verify captca</p>
+          <div class="g-recaptcha"
+          data-sitekey="6LfPjswUAAAAAOiqrBtof-lF8_2waTKsOxRSnPPe"
+          data-callback="onSubmit">
+    </div>
+          <br>
+
+        <div class="text-right"><br>
+          <button class="btn btn-primary btn-full" type="submit"> Submit</button>
+        </div>
+      </form>
+
+
+
+</center>
+
+  	{% endblock %}

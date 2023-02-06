@@ -1,0 +1,23 @@
+{% extends 'base/layout.html' %}
+
+  {% block main%}
+  <div id="page-banner-area" class="page-banner-area" style="background-image:url(static/images/banner/banner3.jpg)">
+		<!-- Subpage title start -->
+		<div class="page-banner-title">
+        	<div class="text-center">
+	        	<h2>BLOG</h2>
+
+         </div>
+    </div><!-- Subpage title end -->
+	</div><!-- Page Banner end -->
+  <H2>life Events – The Company</H2>
+  {% for i in blogs %}
+  <div class="blog-post">
+  <img src="{{ i.image.url }}" alt="">
+  <h3>{{ i.heading }}</h3>
+
+  <p>{{ i.content| safe }}</p>
+  <a href="https://nitd.home.blog/" class="site-btn readmore">Read More</a>
+  </div>
+  {% endfor %}
+  	{% endblock %}

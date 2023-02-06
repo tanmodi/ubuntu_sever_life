@@ -1,0 +1,92 @@
+{% extends 'base/layout.html' %}
+
+  {% block main%}
+
+  <div id="page-banner-area" class="page-banner-area" style="background-image:url(static/images/banner/banner002.jpg)">
+    <!-- Subpage title start -->
+    <div class="page-banner-title">
+          <div class="text-center">
+            <h2>User Registration</h2>
+         </div>
+      </div><!-- Subpage title end -->
+  </div><!-- Banner end -->
+    <center>
+
+    <div class="gap-30"></div>
+
+      <form action="{%url 'userregister'%}" method="post" class="contact-form-bottom">
+        {% csrf_token %}
+        <div class="error-container"></div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="Username" name="username" id="username" type="text" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="Name" name="name" id="name" type="text" required>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female
+        </div>
+      </div>
+
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="Age" name="age" id="age" type="text" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <input placeholder="Email" name="email" id="email"
+              type="email" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <input placeholder="Mobile No" name="mobileno" id="mobileno" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="city" name="city" id="city" type="text" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="zipcode" name="zipcode" id="zipcode" type="text" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="country" name="country" id="country" type="text" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="password" name="password" id="password" type="password" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+            <input placeholder="repassword" name="repassword" id="repassword" type="password" required>
+            </div>
+          </div>
+
+
+        <div class="text-right"><br>
+          <button class="btn btn-primary btn-full" type="submit"><i class="fa fa-paper-plane-o"></i> Register</button>
+        </div>
+      </form>
+
+
+
+</center>
+
+  	{% endblock %}

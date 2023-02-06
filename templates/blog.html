@@ -1,0 +1,76 @@
+{% extends 'base/layout.html' %}
+
+  {% block main%}
+  <div id="page-banner-area" class="page-banner-area" style="background-image:url(static/images/banner/banner3.jpg)">
+		<!-- Subpage title start -->
+		<div class="page-banner-title">
+        	<div class="text-center">
+	        	<h2>BLOG</h2>
+
+         </div>
+    </div><!-- Subpage title end -->
+	</div><!-- Page Banner end -->
+  <H2>life Events – The Company</H2>
+  {% for i in blogs %}
+  <div class="blog-post">
+  <img src="{{ i.image.url }}" alt="">
+  <h3>{{ i.heading }}</h3>
+
+  <p>{{ i.content| safe }}</p>
+  <p>{{i.date_posted}}</p>
+
+  </div>
+  {% endfor %}
+
+  <div id="comments" class="comments-area">
+    <h3 class="comments-heading">Comments</h3>
+
+    <ul class="comments-list">
+      <li>
+
+
+          {% for j in comments %}
+
+            <img class="comment-avatar " alt="" src="{{ j.image.url }}">
+
+              <div class="meta-data">
+                <span class="comment-author">{{ j.name }}</span>
+                <span class="comment-date pull-right">{{ j.date }}</span>
+              </div>
+              <div class="comment-content">
+              <p>{{ j.content }}</p></div>
+
+          <!-- Comments end -->
+          {% endfor %}
+          <form action="{%url 'reply'%}" method="post" class="contact-form-bottom" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="error-container"></div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                <input placeholder="Name" name="name" id="name" type="text" required>
+                </div>
+              </div>
+              <h5 class="comments-heading">---  select your photo</h5>
+
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="file" name="image" >
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                <textarea id="message" name="comment" placeholder="Your Comment" rows="5" cols="60" required></textarea>
+              </div>
+              </div>
+
+
+            <div class="text-right"><br>
+              <button class="btn btn-primary btn-full" type="submit"><i class="fa fa-paper-plane-o"></i> Post</button>
+            </div>
+          </form>
+      </li><!-- Comments-list li end -->
+    </ul><!-- Comments-list ul end -->
+  </div><!-- Post comment end -->
+
+  	{% endblock %}

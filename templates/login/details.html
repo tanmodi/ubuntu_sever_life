@@ -1,0 +1,88 @@
+{% extends 'login/base/layout.html' %}
+
+  {% block main%}
+
+	<div id="page-banner-area" class="page-banner-area" style="background-image:url(static/images/banner/banner002.jpg)">
+		<!-- Subpage title start -->
+		<div class="page-banner-title">
+        	<div class="text-center">
+	        	<h2>User details</h2>
+         </div>
+      </div><!-- Subpage title end -->
+	</div><!-- Banner end -->
+
+
+
+  <div class="contact-info">
+    <div class="contact-info-box">
+      <i class="fa fa-map-marker">&nbsp;</i>
+      <div class="contact-info-box-content">
+        <h4>Name: </h4>
+        <p>{{user.name}}</p>
+      </div>
+    </div>
+    <div class="contact-info-box">
+      <i class="fa fa-map-marker">&nbsp;</i>
+      <div class="contact-info-box-content">
+        <h4>Username: </h4>
+        <p>{{user.username}}</p>
+      </div>
+    </div>
+    <div class="contact-info-box">
+      <i class="fa fa-map-marker">&nbsp;</i>
+      <div class="contact-info-box-content">
+        <h4>gender: </h4>
+        <p>{{user.gender}}</p>
+      </div>
+    </div>
+    <div class="contact-info-box">
+      <i class="fa fa-map-marker">&nbsp;</i>
+      <div class="contact-info-box-content">
+        <h4>age: </h4>
+        <p>{{user.age}}</p>
+      </div>
+    </div>
+    <div class="contact-info-box">
+      <i class="fa fa-map-marker">&nbsp;</i>
+      <div class="contact-info-box-content">
+        <h4>city: </h4>
+        <p>{{user.city}}</p>
+      </div>
+    </div>
+    <div class="contact-info-box">
+      <i class="fa fa-map-marker">&nbsp;</i>
+      <div class="contact-info-box-content">
+        <h4>country: </h4>
+        <p>{{user.country}}</p>
+      </div>
+    </div>
+    <div class="contact-info-box">
+      <i class="fa fa-map-marker">&nbsp;</i>
+      <div class="contact-info-box-content">
+        <h4>mobileno: </h4>
+        <p>{{user.mobileno}}</p>
+      </div>
+    </div>
+    <div class="contact-info-box">
+      <i class="fa fa-envelope-o">&nbsp;</i>
+      <div class="contact-info-box-content">
+        <h4>Email: </h4>
+        <p>{{user.email}}</p>
+      </div>
+    </div>
+
+    <div class="contact-info-box">
+      <i class="fa fa-map-marker">&nbsp;</i>
+      <div class="contact-info-box-content">
+        <h4>zipcode: </h4>
+        <p>{{user.zipcode}}</p>
+      </div>
+    </div>
+
+  </div><!-- contact info end -->
+
+
+
+
+
+  {% endblock %}

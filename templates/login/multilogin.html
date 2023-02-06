@@ -1,0 +1,48 @@
+{% extends 'base/layout.html' %}
+
+  {% block main%}
+
+  <div id="page-banner-area" class="page-banner-area" style="background-image:url(static/images/banner/banner002.jpg)">
+    <!-- Subpage title start -->
+    <div class="page-banner-title">
+          <div class="text-center">
+            <h2>User Login</h2>
+         </div>
+      </div><!-- Subpage title end -->
+  </div><!-- Banner end -->
+
+
+    <div class="gap-30"></div>
+
+
+  <div class="col-md-4">
+    <div >
+      <center>
+      <p class="venu-info-text">login via <a href="{%url 'password'%}"><strong>password </strong></a> <br>login via otp on registered <a href="{%url 'genmotp'%}"><strong>mobile no</strong></a> <br> login via otp on registered <a href="{%url 'geneotp'%}"><strong>email-id</strong></a></p>
+      </center>
+    </div><!-- Venu content end -->
+  </div><!-- Col 2 end -->
+       <br>
+       <br>
+       <br>
+
+
+
+
+
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6LfPjswUAAAAAOiqrBtof-lF8_2waTKsOxRSnPPe"></div>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+<p> </p>
+
+
+
+  	{% endblock %}

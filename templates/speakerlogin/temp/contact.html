@@ -1,0 +1,95 @@
+{% extends 'speakerlogin/base/layout.html' %}
+
+  {% block main%}
+
+	<div id="page-banner-area" class="page-banner-area" style="background-image:url(static/images/banner/banner002.jpg)">
+		<!-- Subpage title start -->
+		<div class="page-banner-title">
+        	<div class="text-center">
+	        	<h2>Contact</h2>
+         </div>
+      </div><!-- Subpage title end -->
+	</div><!-- Banner end -->
+
+	<section id="main-container" class="main-container">
+		<div class="container">
+
+
+
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14018.115876943177!2d77.1236316!3d28.5538745!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a9db17053b82780!2sPullman+New+Delhi+Aerocity!5e0!3m2!1sen!2sin!4v1564732896653!5m2!1sen!2sin" width="1100" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+			<div class="row">
+
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+						<div class="sidebar sidebar-left">
+							<h3>Contact Us</h3>
+							<p>This year life events is happening at the brand Pullman New Delhi Aerocity Hotel, Aerocity, Delhi. One of the India's iconic and beautiful location. You will join over 1500 attendies in one of the best Conference Venue in Asia.</p>
+
+							<div class="contact-info">
+								<div class="contact-info-box">
+									<i class="fa fa-map-marker">&nbsp;</i>
+									<div class="contact-info-box-content">
+										<h4>Address: </h4>
+										<p>2 IGI Airport GMR Hospitality District Asset No 02, New Delhi, Delhi 110037</p>
+									</div>
+								</div>
+
+								<div class="contact-info-box">
+									<i class="fa fa-envelope-o">&nbsp;</i>
+									<div class="contact-info-box-content">
+										<h4>Email: </h4>
+										<p>contact@lifeevents.com</p>
+									</div>
+								</div>
+
+								<div class="contact-info-box">
+									<i class="fa fa-phone">&nbsp;</i>
+									<div class="contact-info-box-content">
+										<h4>Phone: </h4>
+										<p>011 4608 0808</p>
+									</div>
+								</div>
+
+							</div><!-- contact info end -->
+						</div><!-- Sidebar left end -->
+					</div><!-- Sidebar col end -->
+
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	    			<h3>Contact Form</h3>
+	    			<form  class="contact-form-bottom" action="{%url 'Contactus'%}" method="post">
+              {% csrf_token %}
+                <div class="error-container"></div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+									<input placeholder="Name" name="name" id="name" type="text" required>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<input placeholder="Email" name="email" id="email"
+										type="email" required>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<input placeholder="Subject" name="subject" id="subject" required>
+
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<textarea name="message" id="message" placeholder="Message" rows="4" cols="65" required></textarea>
+							</div>
+							<div class="text-right"><br>
+								<button class="btn btn-primary btn-full" type="submit"><i class="fa fa-paper-plane-o"></i> Send Message</button>
+							</div>
+						</form><!-- Contact form end -->
+	    		</div><!-- Col end -->
+
+			</div><!-- Content row -->
+
+		</div><!-- Conatiner end -->
+	</section><!-- Main container end -->
+  {% endblock %}
