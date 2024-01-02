@@ -143,8 +143,8 @@ STATICFILES_DIRS=(
 
 EMAIL_HOST = 'outlook.office365.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'lifeevent2023@outlook.com'
-EMAIL_HOST_PASSWORD = 'Sh%#47OP'
+EMAIL_HOST_USER = 'email'
+EMAIL_HOST_PASSWORD = 'password'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
