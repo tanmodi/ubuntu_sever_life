@@ -37,7 +37,7 @@ def suserregister(request):
     url = "https://www.fast2sms.com/dev/bulkV2"
     payload = senderid + message + route + number
     headers = {
-      'authorization': "kaGNdrFqnTuZQ0hINefJ7IWn1UL4VX9u9l6u4AkbK8t1gQLzEa7aCSkJ6uVh",
+      'authorization': "enter_your_key",
       'Content-Type': "application/x-www-form-urlencoded",
       'Cache-Control': "no-cache",
     }
@@ -94,7 +94,7 @@ def sgenmotp(request):
     url = "https://www.fast2sms.com/dev/bulkV2"
     payload = senderid + message + route + number
     headers = {
-      'authorization': "kaGNdrFqnTuZQ0hINefJ7IWn1UL4VX9u9l6u4AkbK8t1gQLzEa7aCSkJ6uVh",
+      'authorization': "enter_your_key",
       'Content-Type': "application/x-www-form-urlencoded",
       'Cache-Control': "no-cache",
     }
